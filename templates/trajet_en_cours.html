@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{%block menu%}
+    <li><a href="/profil">Profil</a></li>
+    <li> <a href="/trajet">trajet</a></li>
+    <li> <a href="/trajet_en_cours/post">Trajet en cours</a></li>
+    <li> <a href="/deconnexion">deconnexion</a></li>
+
+{%endblock%}
+
+{%block content%}
+<ul>
+    <li><a href="all" class="dark">Tout les trajets</a></li>
+    <li><a href="mine" class="dark">Mes Trajet</a></li>
+    <li><a href="past" class="dark">Trajet passée</a></li>
+    <li><a href="post" class="dark">Trajet futur</a></li>
+</ul>
+
+
+
+
+{%if isEmpty%}
+<h2>Vous n'avez conduit/participé à un trajet de trajet</h2>
+{%endif%}
+
+{%for line in list_trajet%}
+<div class="etape">
+    <h2>Trajet de {{line[1]}}</h2>
+    <p>Le {{line[2]}}</p>
+    <p><a href="/t-{{line[0]}}">Plus d'info</a></p>
+</div>
+{%endfor%}
+
+{%endblock%}

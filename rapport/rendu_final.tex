@@ -1,0 +1,117 @@
+\documentclass[french]{report}
+
+
+\usepackage[T1]{fontenc}
+%\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{babel}
+\usepackage{pdfpages}
+
+\usepackage{graphicx} 
+\usepackage{amsmath,amssymb,amsthm}
+%%%%% pour les graphics 
+\usepackage{pgfplots}
+\usepackage{tikz}
+% pour le style
+\usepackage{xcolor} % les couleurs du texte
+\usepackage{ulem}
+\usepackage{cancel}% pour supprimer du texte 
+
+\usepackage[colorlinks=true, linkcolor=blue]{hyperref}
+\usepackage{sectsty}
+
+\usepackage{multicol}
+
+\usepackage{inputenc}
+
+
+\usepackage{listings}
+\usepackage{color}
+%%%%%% couleur des sections 
+\sectionfont{\color{red}}
+%\subsectionfont{\color{red}}
+
+
+\lstset{
+	language=SQL,
+	keywordstyle=\color{blue},
+	commentstyle=\color{green},
+	stringstyle=\color{red},
+	frame = single,
+	breaklines= true,
+	moredelim=[is][\color{yellow}]{}{()} % Colorer le nom de la fonction en jaune
+}
+
+%%%%%%%%%nouvelles commandes  
+\addtolength{\oddsidemargin}{-.875in}
+\addtolength{\evensidemargin}{-.875in}
+\addtolength{\textwidth}{1.75in}
+\addtolength{\topmargin}{-.875in}
+\addtolength{\textheight}{1.75in}
+
+\newcommand{\set}[1]{\left\lbrace#1\right\rbrace}
+\newcommand{\sys}[1]{\left\lbrace\substack{#1}\right.}
+\newcommand{\floor}[1]{\left\lfloor{#1}\right\rfloor}
+\newcommand{\abs}[1]{\left|{#1}\right|}
+\newcommand{\warning}{/!$\setminus$}
+
+
+
+
+%%%%% defintions des couleurs 
+\definecolor{skyblue}{RGB}{135, 206, 235}
+\definecolor{darkgreen}{RGB}{0, 150, 0}
+
+\definecolor{myblue}{rgb}{0, 0.13, 0.60}
+\definecolor{mygrey}{gray}{0.85}
+\definecolor{lblue}{rgb}{0.22,0.45,0.70}
+
+
+\title{Rapport Base de données}
+\author{Augustin Fourmy - Elazar Cohen}
+
+\begin{document}
+	\maketitle
+	\tableofcontents
+	\newpage
+	
+	\chapter{Rendu 1}
+	\includepdf[pages=-]{rendu1.pdf}
+	
+	\chapter{Rendu 2}
+	\include{rendu2.tex}
+	
+	\chapter{Rendu 3}
+	\include{rendu3.tex}
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+\end{document}

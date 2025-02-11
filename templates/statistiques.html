@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{%block menu%}
+    {%if connecte %}
+        <li><a href="profil">Profil</a></li>
+        <li> <a href="trajet">trajet</a></li>
+        <li> <a href="trajet_en_cours/post">Trajet en cours</a></li>
+        <li> <a href="deconnexion">deconnexion</a></li>
+    {%else%}
+        <li><a href="connexion">Connexion</a></li>
+    {%endif%}
+{%endblock%}
+
+
+
+{%block content%}
+
+<h1>Statistiques</h1>
+<div>
+    <h2>{{ttKm}} kms parcourus dont {{nbSponso}} kms sponsorisé</h2>
+</div>
+<div>
+    <h3> Les 10 lieux les plus visité sont :</h3>
+    <ol>
+    {% for lieu in topLieux %}
+        <li> Le <i>{{lieu[0]}}</i> est la destination de {{lieu[1]}} étapes </li>
+    {%endfor%}
+        </ol>
+</div>
+
+    
+
+{%endblock%}

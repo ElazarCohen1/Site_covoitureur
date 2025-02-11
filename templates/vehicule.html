@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+
+{%block css%}
+<link rel="stylesheet" type="text/css" href="../static/profil.css">
+<link rel="stylesheet" type="text/css" href="../static/vehicule.css">
+
+
+{%endblock%}
+
+{%block menu%}
+<li><a href="profil">Profil</a></li>
+<li> <a href="trajet">trajet</a></li>
+<li> <a href="/trajet_en_cours/post">Trajet en cours</a></li>
+<li> <a href="deconnexion">deconnexion</a></li>
+{%endblock%}
+
+
+
+{%block content%}
+
+
+<div id="content">
+    <div id="vehicule">
+        <h2>Ton vehicule</h2>
+        <p>immatriculation : {{dico_vehicules["immatriculation"]}}</p>
+        <p>modele : {{dico_vehicules["modele"]}}</p>
+        <p>nombre_places : {{dico_vehicules["nombre_places"]}}</p>
+        <p>couleur : {{dico_vehicules["couleur"]}}</p>
+        <p> type_carburant: {{dico_vehicules["type_carburant"]}}</p>
+        <p>crit_Air: {{dico_vehicules["crit_Air"]}}</p>
+    </div>
+
+    <div id="sponsor">
+        <h2>Tes sponsors</h2>
+        {%if lst_dic_sponsor%}
+            {%for dico in lst_dic_sponsor%}
+                <div id="texte_sponsor" class="sponsor">
+                    <p>nom du sponsor : {{dico["nom"]}} </p>
+                    <p>nature de la pub :{{dico["nature_pub"]}} </p>
+                    <p>remuneration : {{dico["remuneration"]}} € </p>
+                </div>  
+            {%endfor%}
+            <div class="navigation">
+                <button id="btn_prev">⬅️ Précédent</button>
+                <button id="btn_suiv">➡️ Suivant</button>
+            </div>
+        {%else%}
+            <p>tu n'a aucun sponsor </p>
+        {%endif%}
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let trajets = document.querySelectorAll(".sponsor");
+            let currentIndex = 0;
+
+            // Fonction pour mettre à jour l'affichage
+            function updateDisplay() {
+                trajets.forEach((trajet, index) => {
+                    trajet.classList.toggle("active", index == currentIndex);
+                });
+            }
+            document.getElementById("btn_prev").addEventListener("click", function() {
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : trajets.length - 1;
+                updateDisplay();
+            });
+
+            document.getElementById("btn_suiv").addEventListener("click", function() {
+                currentIndex = (currentIndex < trajets.length - 1) ? currentIndex + 1 : 0;
+                updateDisplay();
+            });
+
+            // Initialisation
+            updateDisplay();
+        });
+
+    </script>
+
+    
+    <div id="modif_vehicule">
+        <h2> modifier votre vehicule</h2>
+        <form method="post" action="modif_vehicule">
+            <input type="hidden" name="immatriculation" id="immatriculation" placeholder="immatriculation" value="{{dico_vehicules["immatriculation"]}}" maxlength="7" minlength="7">
+            
+            <label for="modele"  > changer le modele : </label>
+            <input type="text" name="modele" id="modele" placeholder="modele " value="{{dico_vehicules["modele"]}}">
+            
+            <label for="nombre_place">changer le nombre de places :</label>
+            <input type="number" name="nombre_place" id="nombre_place" placeholder="nombre de places" value="{{dico_vehicules["nombre_places"]}}" min="0" max="10">
+        
+            <label for="couleur"> changer la couleur</label>
+            <input type="color" name="couleur" id="couleur" value="{{dico_vehicules["couleur"]}}">
+    
+            <label for="type_carburant"> changer le type de carburant</label>
+            <input type="text" name="type_carburant" id="type_carburant" placeholder="type du carburant" value="{{dico_vehicules["type_carburant"]}}">
+            
+            <label for="crit_Air"> changer le crit_Air</label>
+            <input type="text" name="crit_Air" id="crit_Air" placeholder="crit_Air" value="{{dico_vehicules["crit_Air"]}}" min="1" max="1">
+            
+            <input type="submit" id="submit" value="modifier" >
+        </form>
+    </div>
+
+
+    <div id="sponso_vehicule">
+        <h2> Sponsorise ton vehicule</h2>
+        <form method="post" action="{{ url_for('sponso_vehicule', immatriculation=dico_vehicules['immatriculation']) }}" >            
+            <label for="liste_sponsor">liste des sponsors: </label>
+            <select id="liste_sponsor" name="sponsor">
+                {%for val in lst_sponsor%}                    
+                    <option value="{{val[1]}}">{{val[0]}} </option>
+                {%endfor%}
+            </select>
+            <input type="submit" value="sponsoriser">
+        </form>
+    </div>  
+    
+    
+    
+</div>
+
+
+
+{%endblock%}

@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{%block css%}<link rel="stylesheet" type="text/css" href="../static/profil.css">{%endblock%}
+
+{%block menu%}
+    {%if connected %}
+        <li><a href="/profil">Profil</a></li>
+        <li> <a href="/trajet">trajet</a></li>
+        <li> <a href="/trajet_en_cours/post">Trajet en cours</a></li>
+        <li><a href="/statistiques">Statistiques</a></li>
+        <li> <a href="/deconnexion">deconnexion</a></li>
+    {%else%}
+        <li><a href="/connexion">Connexion</a></li>
+    {%endif%}
+    
+{%endblock%}
+
+
+
+{%block content%}
+    {%if error == "mail" %}
+        <h1>vous n'avez pas entrez le bon mail !!</h1>
+    {%elif error == "mdp"%}
+        <h1>vous n'avez pas entrez le bon mot de passe !!</h1>
+    {%elif error == "permis"%}
+        <h1>vous n'avez pas entrez de permis !!</h1>
+
+    {%elif error == "carburant"%}
+        <h1>mauvais type de carburant ou mauvais critAir</h1>
+
+    {%elif error == "immatriculation_existante"%}
+        <h1>L'immatriculation existe déja c'est donc une fausse j'appelle la police!!!!!!!!</h1>
+    {%elif error == "not_sponsor"%}
+        <h1>Vous n'avez pas sélectionner de sponsor!!!</h1>
+
+    {%elif error == "mdp"%}
+        <h1>L'immatriculation existe déja c'est donc une fausse</h1>
+
+    {%endif%}    
+
+
+{%endblock%}

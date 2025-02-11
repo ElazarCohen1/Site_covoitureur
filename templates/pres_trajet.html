@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{%block title%} Trajet de {{conducteur}} {%endblock%}
+{%block menu%}
+    <li><a href="/profil">Profil</a></li>
+    <li> <a href="/trajet">trajet</a></li>
+    <li> <a href="/trajet_en_cours/post">Trajet en cours</a></li>
+    <li> <a href="/deconnexion">deconnexion</a></li>
+{%endblock%}
+{%block content%}
+<h1>Trajet de {{conducteur}} {%if nbnote > 0%} (Noté en moyenne {{avgn}}/5 sur {{nbnote}} notes) {%endif%}</h1>
+<h3>A lieu le {{date}}, pour une durée prévue de {{duree}}</h3>
+<h3>Coute: {{cost}}€ et parcours {{km_s}} km(s)</h3>
+<h2>Part de : </h2>
+<ul>
+    <li>{{dep[0]}}</li>
+    <li>{{dep[1]}}</li>
+    <li>{{dep[2]}}</li>
+    <li>{{dep[3]}}</li>
+    <li><a href="/loc/{{dep[4]}}" class="dark">Plus d'info</a></li>
+</ul>
+<h2>Arrive à: </h2>
+<ul>
+    <li>{{arr[0]}}</li>
+    <li>{{arr[1]}}</li>
+    <li>{{arr[2]}}</li>
+    <li>{{arr[3]}}</li>
+    <li><a href="/loc/{{arr[4]}}" class="dark">Plus d'info</a></li>
+</ul>
+
+{%if isAdmin and not status%}
+<form action="/t-{{id}}/finalise" method="POST">
+    <input type="hidden" name="is_locked" value="0"> <!--reste d'une version où on pouvais ré-ouvrir un trajet-->
+    <input type="submit"  name="submit"  value="Finaliser">
+</form>
+{%elif not isAdmin%}
+    Noté le conducteur {%if note >= 0%} (Note actuelle = {{note}}) {%endif%} :
+<form action="/t-{{id}}/note_conducteur" method="POST">
+    <input type="hidden" name="cible" value="{{orga}}">
+    <input type="hidden" name="exists" value="{%if note >= 0%} 1 {%else%} 0 {%endif%}">
+    <input type="number" name="note" min="0" max="5" value="{%if note >= 0%} {{note}} {%else%} 0 {%endif%}">
+    <input type="submit" name="submit" value="Noter">
+</form>
+{%endif%}
+
+{%for i in range(nbUsersEtapes)%}
+<div class="etape {%if etapes[users[i]]['valid']%}valid{%endif%}">
+    <h2>Étape de {{etapes[users[i]]['user']}}</h2>
+    <p> Départ à {{etapes[users[i]]['heure_start']}} pour arriver à {{etapes[users[i]]['heure_end']}}</p>
+    <h2>Part de: {%if etapes[users[i]]['true_start']%}(Heure réelle: {{etapes[users[i]]['true_start']}}){%endif%}</h2>
+    <ul>
+        <li>{{etapes[users[i]]['depart'][0]}}</li>
+        <li>{{etapes[users[i]]['depart'][1]}}</li>
+        <li>{{etapes[users[i]]['depart'][2]}}</li>
+        <li>{{etapes[users[i]]['depart'][3]}}</li>
+        <li><a href="/loc/{{etapes[users[i]]['depart'][4]}}" class="dark">Plus d'info</a></li>
+    </ul>
+    {%if users[i] == current_user and status and etapes[users[i]]['valid'] and not  etapes[users[i]]['true_start']%} <!-- -->
+        <form method="post" action="/t-{{id}}/e-{{etapes[users[i]]['start_id']}}/post_true_time">
+            <label>Entrer l'heure réelle: </label> <input type="time" name="time">
+            <input type="submit" name="submit" value="Renseigner">
+        </form>
+    {%endif%}
+    <h2>Arrive à : {%if etapes[users[i]]['true_end']%}(Heure réelle: {{etapes[users[i]]['true_end']}}){%endif%}</h2>
+    <ul>
+        <li>{{etapes[users[i]]['arrive'][0]}}</li>
+        <li>{{etapes[users[i]]['arrive'][1]}}</li>
+        <li>{{etapes[users[i]]['arrive'][2]}}</li>
+        <li>{{etapes[users[i]]['arrive'][3]}}</li>
+        <li><a href="/loc/{{etapes[users[i]]['arrive'][4]}}" class="dark">Plus d'info</a></li>
+    </ul>
+    {%if users[i] == current_user and status  and etapes[users[i]]['valid'] and not etapes[users[i]]['true_end']%}
+        <form method="post" action="/t-{{id}}/e-{{etapes[users[i]]['end_id']}}/post_true_time">
+            <label>Entrer l'heure réelle: </label> <input type="time" name="time">
+            <input type="submit" name="submit" value="Renseigner">
+        </form>
+    {%endif%}
+    {%if isAdmin and not status%}
+    <form action="/t-{{id}}/accept">
+        <input type="hidden" name="token" id="token" value="{{etapes[users[i]]['start_id']}}>{{etapes[users[i]]['end_id']}}>{%if etapes[users[i]]['valid']%}1{%else%}0{%endif%}">
+        <input type="submit"  name="submit"  value="{%if etapes[users[i]]['valid']%} Refuser {%else%} Accepter {%endif%}">
+    </form>
+    {%endif%}
+</div>
+{%endfor%}
+{%if not isAdmin%}
+{%if not status%}
+<h2>Proposer une étape</h2>
+<form action="/t-{{id}}/propose" method="POST">
+    <label>Heure de départ : </label><input type="time" id="start_time" name="start_time" required /> <br>
+    <label>Nom du lieu : </label> <input type="text" name="start_name" maxlength="50" required> <br>
+    <label>Adresse : </label> <input type="text" name="start_adresse" maxlength="100" required><br>
+    <label> Ville </label> <input type="text" name="start_city" maxlength="64" required><br>
+    <label> Description </label> <br>
+    <textarea name="start_desc" cols="40" rows="5" maxlength="500"></textarea>
+    <br>
+    <label>Heure d'arriver : </label><input type="time" id="end_time" name="end_time" required /> <br>
+    <label>Nom du lieu : </label> <input type="text" name="end_name" maxlength="50" required> <br>
+    <label>Adresse : </label> <input type="text" name="end_adresse" maxlength="100" required><br>
+    <label> Ville </label> <input type="text" name="end_city" maxlength="64" required><br>
+    <label> Description </label> <br>
+    <textarea name="end_desc" cols="40" rows="5" maxlength="500"></textarea>
+    <br>
+    <input type="submit"  name="submit"  value="Proposer" id="submit">
+</form>
+{%else%}
+Ce trajet est finalisé
+{%endif%}
+{%endif%}
+{%endblock%}

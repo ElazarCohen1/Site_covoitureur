@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{%block menu%}
+    <li><a href="profil">Profil</a></li>
+    <li> <a href="trajet">trajet</a></li>
+    <li> <a href="trajet_en_cours/post">Trajet en cours</a></li>
+    <li> <a href="deconnexion">deconnexion</a></li>
+{%endblock%}
+
+{%block content%}
+<a href="/trajet_form" class="dark">Proposer un nouveau trajet</a>
+{% if nbtrajet > 0 %}
+{%for i in range(nbtrajet)%}
+<div class="etape">
+    <h2>Trajet de {{proprio[i]}}</h2>
+    <p>Le {{dates[i]}} pour {{couts[i]}} €</p>
+    <p>Peut contenir {{nb_places[i]}} personnes</p>
+    <p><a href="t-{{id_s[i]}}">Plus d'info</a></p>
+</div>
+{%endfor%}
+{% else %}
+<h1>Il n'y a plus de trajet ! Retourne en arrière !</h1>
+{%endif%}
+{%if previousOffset >= 0%}
+<form>
+    <input type="hidden" name="page" value="{{previousOffset}}">
+    <input type="submit" value="Page précédente">
+</form>
+<form>
+    <input type="hidden" name="page" value="{{nextPageOffset}}">
+    <input type="submit" value="Page suivante">
+</form>
+{%endif%}
+{%endblock%}

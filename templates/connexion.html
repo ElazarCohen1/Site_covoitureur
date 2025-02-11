@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{%block css%} <link rel="stylesheet" type="text/css" href="../static/connexion.css"> {%endblock%}
+{%block menu%}            
+            <li><a href="/connexion">Connexion</a></li>
+{%endblock%}
+
+{%block content%}
+
+<div id="formulaire">
+    <form method="post" action="res_form_connexion">
+        <h1> Connexion</h1>
+        <!-- <label for="email">Email address</label> -->
+        <input type="email"  name="email" class="champs" id="email" placeholder="entrer votre addresse email">
+
+        <!-- <label for = "mdp" > mot de passe</label> -->
+        <input  type="password"  name="mdp" class="champs" id="mdp" placeholder="rentrer votre mot de passe">
+
+        <div id="boutton">
+            <input type="submit"  name="connexion"  value="se connecter" id="submit">
+            <a href="inscription">
+                <input type="button" value="S'inscrire" id="inscription">
+            </a>                  
+                
+        </div>
+        
+        
+    </form>
+</div>
+
+
+
+{%endblock%}

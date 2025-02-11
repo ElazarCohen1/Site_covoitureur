@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{%block menu%}
+    <li><a href="/profil">Profil</a></li>
+    <li> <a href="/trajet">trajet</a></li>
+    <li> <a href="/trajet_en_cours/post">Trajet en cours</a></li>
+    <li> <a href="/deconnexion">deconnexion</a></li>
+{%endblock%}
+
+{%block content%}
+<form action="/trajet_form_post" method="POST">
+    <h3> Étape de départ </h3>
+    <label>Heure : </label><input type="time" id="start_time" name="start_time" required /> <br>
+    <!--<label>Lieu: </label><input type="number" id="loc_id_s" name="loc_id_s" required /> <br>-->
+    <label>Nom du lieu : </label> <input type="text" name="start_name" maxlength="50" required> <br>
+    <label>Adresse : </label> <input type="text" name="start_adresse" maxlength="100" required><br>
+    <label> Ville </label> <input type="text" name="start_city" maxlength="64" required><br>
+    <label> Description </label> <br>
+    <textarea name="start_desc" cols="40" rows="5" maxlength="500"></textarea>
+    <br>
+    <h3> Étape d'arriver </h3>
+    <label>Heure : </label><input type="time" id="end_time" name="end_time" required /> <br>
+    <!--<label>Lieu : </label><input type="number" id="loc_id_e" name="loc_id_e" required /> <br>-->
+    <label>Nom du lieu : </label> <input type="text" name="end_name" maxlength="50" required> <br>
+    <label>Adresse : </label> <input type="text" name="end_adresse" maxlength="100" required><br>
+    <label> Ville </label> <input type="text" name="end_city" maxlength="64" required><br>
+    <label> Description </label> <br>
+    <textarea name="end_desc" cols="40" rows="5" maxlength="500"></textarea>
+    <br>
+    <h3>Autre</h3>
+    <label>Vehicule : </label><select name="vehicules" id="vehicules">
+        {%for imma in immatriculations%}
+        <option value={{imma}}>{{imma}}</option>
+        {%endfor%}
+    </select> <br>
+    <label>Cout : </label> <input type="number" name="cost" step=".01" required> <br>
+    <label>Date : </label><input type="date" name="date" id="date" required> <br>
+    <label>Kms estimé : </label><input type="number" name="kms" id="kms" min="0" required> <br>
+    <input type="submit" value="Proposer">
+</form>
+{%endblock%}

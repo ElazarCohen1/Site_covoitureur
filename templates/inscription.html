@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{%block css%} <link rel="stylesheet" type="text/css" href="../static/connexion.css"> {%endblock%}
+{%block menu%}            
+            <li><a href="/connexion">Connexion</a></li>
+{%endblock%}
+{%block content%}
+
+<div id="formulaire">
+    <form method="post" action="res_form">
+        <h1> inscription</h1>
+        <!-- <label for="email">Email address</label> -->
+        <input type="email"  name="email" class="champs" id="email" placeholder="entrer votre addresse email">
+
+        <!-- <label for = "nom" > name</label> -->
+        <input type="text"  name="nom" class="champs" id="name" placeholder="Entrer votre nom">
+
+        <!-- <label for = "prenom" > prenom</label> -->
+        <input type="text"  name="prenom" class="champs" id="prenom" placeholder="Entrer votre prenom">
+
+        <!-- <label for = "addresse" > addresse</label> -->
+        <input type="text" name="addresse" class="champs" id="addresse" placeholder="Enter your addresse">
+
+        <label for = "naissance" > date de naissance</label>
+        <input type="date"  name="date_naissance" class="champs" id="naissance" placeholder="Entrer votre date de naissance">
+
+        <!-- <label for = "mdp1" > mot de passe</label> -->
+        <input type="password"  name="mdp1" class="champs" id="mdp1" placeholder="rentrer un mot de passe">
+
+        <!-- <label for = "mdp2" > confirmer mot de passe</label> -->
+        <input type="password"  name="mdp2" class="champs" id="mdp2" placeholder="confirmer votre mot de passe">
+
+        <div id="boutton">
+            <input type="submit"  name="submit"  value="S'inscrire" id="submit">
+        </div>
+       
+        
+    </form>
+</div>
+
+
+
+{%endblock%}

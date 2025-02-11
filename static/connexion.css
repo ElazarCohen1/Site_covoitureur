@@ -1,0 +1,92 @@
+form{
+    width: 30%;
+    height: 50%;
+    /* padding: 10% 0% 10% 0%; */
+    backdrop-filter: blur(20px);
+
+    /* background-color: bisque; */
+    /* margin: 10%; */
+    border: 1px solid black;
+    border-radius: 40px;
+  
+}
+
+
+form h1{
+    text-align: center;
+    /* border: 2px solid black; */
+
+}
+
+
+
+#formulaire{
+    /* background-color: lightblue; */
+    /* background-size: cover;*/
+    /* margin-inline: auto; */
+    display: flex;
+    /*flex-direction: column;*/
+    /* flex-wrap: wrap;  */
+    /* border: 2px solid black; */
+    /* box-shadow:border-box;  */
+    justify-content: center;
+    align-items: center;
+    /* max-width: 100%; */
+    height: 100%;  
+
+}
+
+
+
+div form input{
+    width: 98%;
+    border-radius: 40px;
+    margin:2% 0% 2% 0% ;
+    padding: 1% 0% 1% 0% ;
+    background: transparent;
+    /* border: 5px solid green; */
+
+}
+
+
+
+label{
+    display: flex;
+    flex: 1;
+}
+
+#submit,#inscription{
+    background-color: #fff;
+
+}
+
+#boutton{
+    padding: 0%;
+    width: 60%;
+}
+#button input{
+    align-self: center;
+}
+
+input:hover{
+    background-color: white;
+}
+
+input::placeholder{
+    /* background-color: brown; */
+    /* margin: 2%; */
+    color: black;
+    width: 100%;
+    padding:3%;
+}
+
+#submit:hover,#inscription:hover{
+    box-shadow: inset;
+    transform: translateX(3%);
+    transform: translateY(3%);
+}
+
+
+
+
+

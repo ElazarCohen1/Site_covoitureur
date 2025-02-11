@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{%block css%}<link rel="stylesheet" type="text/css" href="../static/accueil.css">{%endblock%}
+{%block menu%}
+    {%if connecte %}
+        <li><a href="profil">Profil</a></li>
+        <li> <a href="trajet">trajet</a></li>
+        <li> <a href="trajet_en_cours/post">Trajet en cours</a></li>
+        <li> <a href="deconnexion">deconnexion</a></li>
+    {%endif%}
+    {%if connecte  == False%}
+        <li><a href="connexion">Connexion</a></li>
+    {%endif%}
+
+{%endblock%}
+
+
+{%block content%}
+<img src="../static/fond_accueil.jpg" alt="fond_accueil" >
+
+<div id="content">
+    <h1>Bienvenue sur notre site de covoiturage !!</h1>
+    {%if connecte%}
+
+        <div id="formulaire">
+            <form action="/search_result">
+                <label>Lieu chercher :</label> <input name="nom" type="text">
+                <input type="submit" value="Chercher">
+            </form>
+        </div>
+
+    {%endif%}
+</div>
+
+
+
+
+{%endblock%}

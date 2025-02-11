@@ -1,0 +1,53 @@
+#content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+    /* border: 5px solid gray; */
+    width: 100%;
+}
+
+
+
+#donnee_utilisateur{
+    /* border: 2px solid black; */
+}
+
+#gerer_voiture{
+    /* border: 2px solid blue; */
+    /* padding: 5%; */
+}
+#gerer_vehicule form{
+    border: 1px solid gray;
+    padding: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    flex-direction: column;
+    width: 100%;
+}
+
+#color{
+    flex-direction:row ;
+}    
+
+
+#historique_deplacement{
+    align-items : center;
+}
+
+#texte_deplacement {
+    display: none; 
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    width: 300px;
+}
+
+#texte_deplacement.active{
+    display: block;
+}
+
+#operation_compte{
+    /* border: 2px solid green; */
+}

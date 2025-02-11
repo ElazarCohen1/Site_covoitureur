@@ -1,0 +1,232 @@
+X;Y;Toponyme Voie;Statut Voie;Libellé Voie;Point Origine Voie;Point Extrémité Voie;N° de Délibération;Date de Délibération;Longueur Voie;Observations
+986778,64;6245304,99;Beausoleil;Publique;Allée Beausoleil;Rue Beausoleil;Avenue de la Cauquière;;;72 m;
+985669,19;6245868,87;Farandole;Privée;Allée de la Farandole;Chemin de l'Argentière;Impasse;96/90;30/05/1996;132 m;
+985731,47;6245865,7;Margelle;Privée;Allée de la Margelle;Chemin de l'Argentière;Impasse;96/90;30/05/1996;125 m;
+985655,14;6245848,51;Musique;Privée;Allée de la Musique;Allée de La Farandole;Place aux Mômes;96/90;30/05/1996;110 m;
+985659,98;6245831,54;Harmonie;Privée;Allée de l'Harmonie;Allée de la Musique;Impasse;96/90;30/05/1996;47 m;
+985595,71;6245817,32;Fado;Privée;Allée du Fado;Allée de La Farandole;Impasse;99/90;30/05/1996;32 m;
+990435,32;6247318,05;Grand Port;Privée;Allée du Grand Port;Rond Point de Port Cogolin;Impasse (Parcelle BH 3);;;;
+990451,87;6247275,72;Petit Port;Privée;Allée du Petit Port;Rue de la Cité des Marins;Impasse (Parcelle BH 12);;;;
+988878,3;6245884,26;Cogolin à Saint-Tropez;Rurale;Ancien ch. de Cogolin à Saint-Tropez;Route de La Foux;Avenue des Narcisses;;;1178 m;
+986931,62;6245331;Jacques de Cuers;Publique;Avenue  Jacques de Cuers;Rue Marceau;Boulevard Gérad Philippe;;17/09/1990;234 m;
+986920,24;6246093,78;André Malraux;Publique;Avenue André Malraux;Rond-Point Saint Maur;Avenue de La Giscle;;;519 m;
+986923,16;6246093,63;Claude Sautet;Publique;Avenue Claude Sautet;Rond-Point André Pousse;Rond-Point Saint-Maur;2014/063;16/06/2014;423 m;
+986865,2;6245134;Cauquière;Publique;Avenue de la Cauquière;Rue des Mines;Rue Pisan;;03/05/1983;463 m;
+987312,52;6245853,44;Giscle;DPC;Avenue de La Giscle;Chemin du Peyron;Avenue Jean Moulin;2011/048;10/05/2011;365 m;
+986868,28;6245723,24;Audiguier;Publique;Avenue de l'Audiguier;Rue des Moulins;Avenue Louis Aragon;;30/05/1983;419 m;
+987941,66;6245442,6;Valensole;DPC;Avenue de Valensole;Route de La Mole;Parcelle BA 123;94/105;28/10/1994;310 m;
+987093,23;6245021,98;Bastides;DPC;Avenue des Bastides;Rue Marceau;Avenue du Colombier;;;284 m;
+987293,38;6245514,78;Muriers;Publique;Avenue des Muriers;Avenue André Malraux;Avenue Georges Clémenceau;2003/051;22/05/2003;360 m;
+988807,06;6245788,98;Narcisses;DPC;Avenue des Narcisses;Route de La Foux;Impasse;94/50;01/05/1994;830 m;
+987042,79;6244913,73;Colombier;Publique;Avenue du Colombier;Rue Pisan;Rue Marceau;;30/05/1983;305 m;
+987756,12;6245629,88;Contant;Publique;Avenue du Contant;Impasse parcelle AS 40;Impasse Parcelle AS 32;94/49;22/06/1994;211 m;
+987195,1;6245286,13;Subeiran;DPC;Avenue du Subeiran ;Rue Marceau;Rond Point Jean-Pierre de Kock;2003/145;18/12/2003;598 m;
+990826,54;6247177,42;Frédéric Mistral;Publique;Avenue Frédéric Mistral;Avenue Jean Aicard;RD 98;;05/01/1959;306 m;
+987094,48;6245582,41;Clémenceau;Publique;Avenue Georges Clémenceau;Rue Jean Jaurès;Rond-Point de l'Armée d'Afrique;;;651 m;
+990799,81;6247054,37;Jean Aicard;Communale;Avenue Jean Aicard;RD 98 A;Impasse (parcelle BD 72);;;155m;
+990801,34;6247061,03;Jean Aicard;Publique;Avenue Jean Aicard;RD 98A;Impasse (Parcelle BD 72);;;145 m;
+987620,75;6245441,61;Jean Moulin;Publique;Avenue Jean Moulin;Avenue Georges Clémenceau;Avenue de La Giscle;1994/49;31/05/1994;332 m;
+986607,67;6245512,8;Louis Aragon;DPC;Avenue Louis Aragon;Rue des Mines;Chemin de Radasse;;;454 m;
+986307,68;6245390,33;Paul Cezanne;Publique;Avenue Paul Cezanne;Rue Jean Giono;Route ds Mines;;;241 m;
+986902,62;6246090,29;Saint-Maur;Publique;Avenue Saint-Maur;Rond-Point Saint-Maur;Rond-Point Grand Sud;99/076;17/06/1999;1037 m;
+986960,25;6245253,33;Sigismond Coulet;Publique;Avenue Sigismond Coulet;Avenue Clémenceau;Rue Marceau;;05/02/1991;495 m;
+986676,21;6245289,1;Gérard Philippe;Publique;Bd Gérard Philippe;Avenue de la Cauquière;Impasse;;;167 m;
+991087,21;6247089,5;Marines;Privée;Boulevard des Marines;Rue de la Plage;Quai de la Brigantine;;;;
+987186,73;6245288,62;Lattre De Tassigny;Publique;Boulevard du Mal de Lattre de Tassigny;Rue Gambetta;Avenue Sigismond Coulet;;;288 m;
+987120,62;6245372,31;Louis Blanc;Publique;Boulevard Louis Blanc;Avenue Clémenceau;Bd du Mal de Lattre de Tassigny;;;186 m;
+987043,46;6245610,21;Michelet;Publique;Boulevard Michelet;Avenue du Général de Gaulle;Rue Carnot;;;187 m;
+985870,93;6245573,93;Faucon;Rurale;Chemin de Faucon;Chemin de Radasse;Impasse;;24/02/1943;1500 m;Arrêté n° 2012/480
+987436,22;6244664,83;Giégi;DPC;Chemin de Giégi;Chemin du Colombier;Piste Jean Morel;2011/130;20/12/2011;912 m;Arrêté n° 2012/481
+985456,51;6245848,49;Grenouille;Publique;Chemin de Grenouille;Chemin de l'Argentière;Parcelle AI 148;;;295 m;Arrêté n° 2012/482
+987021,4;6243630,07;Gravières;Privée;Chemin de La Gravière;Chemin de la Gravière(rural);Impasse parcelle C520;2011/134;20/12/2011;1092 m;Arrêté n° 2012/484
+986662,44;6244143,11;Gravières;Rurale;Chemin de La Gravière;Route de La Mole;Chemin de la Gravière(privé);2011/134;20/12/2011;1266 m;Arrêté n° 2012/484
+987908,45;6245437,2;Mort du Luc;Publique;Chemin de la Mort du Luc;Route de La Foux;Commune de Gassin;2011/132;20/12/2011;1843 m;Arrêté n° 2012/485
+985204,84;6245633,09;Argentière;Rurale;Chemin de l'Argentière;Rond-Point  Grenouille;Chemin des Mines;;;1078 m;Arrêté n° 2012/486
+984667,06;6245571,11;Hermitan;Publique;Chemin de l'Hermitan;RD48;Chemin de Val de Perrier;;;1555 m;Arrêté n° 2015/747
+984727,69;6245360,09;Magnan;Rurale;Chemin de Magnan;Chemin des Mines;Commune de La Mole;;24/02/1943;1700 m;Arrêté n° 2012/488
+984979,68;6246115,88;Portonfus;Rurale;Chemin de Portonfus;Chemin de l'Hermitan;Parcelle AB1;;04/02/1943;666 m;Arrêté n° 2012/489
+985873,37;6245581,38;Radasse;Publique;Chemin de Radasse;Rue du 19 mars;Route des Mines;;;1012 m;Arrêté n° 2014/993
+986813,23;6245052,12;Trémouriés;Rurale;Chemin de Trémouriés;Rond-Point de la 1ère division;Route  de La Mole;;24/02/1943;960 m;Arrêté n° 2012/491
+982404,06;6245654,63;Val de Perrier;Rurale;Chemin de Val de Perrier;Chemin de l'Hermitan;Commune de La Mole;;24/02/1943;2400 m;Arrêté n° 2012/492
+985870,03;6244908,03;Vaubelette;Rurale;Chemin de Vaubelette;Route des Mines;Parcelle AW 49;;24/02/1943;618 m;Arrêté n° 2012/493
+986114,8;6243426,27;Bergers;Publique;Chemin des Bergers;Route de La Mole;Route de La Foux;2011/133;20/12/2011;4200 m;Arrêté n° 2014/998
+986206,6;6245320,44;Coustelines;Publique;Chemin des Coustelines;Chemin de Vaubelette;Parcelle AW50;2003/030;25/03/2003;441 m;
+984727,67;6245360;Crottes et de Saint Marc;Rurale;Chemin des Crottes et de Saint Marc;Chemin des Mines;Commune de La Mole / Parcelle B 789;;;1352 m;
+986403,05;6245026,15;Fourches;Rurale;Chemin des Fourches;Rond-Point de la 1ère division;Parcelle AV 11;;24/02/1943;4444 m;Arrêté n° 2016/656
+985868,92;6245579,56;Mines;Rurale;Chemin des Mines;Route des Mines;Chemin des Crottes et de Saint-Marc;;;1257 m;Arrêté n° 2012/497
+988413,29;6244664,28;Pasquiers;Privée;Chemin des Pasquiers;Parcelle AZ97;Parcelle C 557;2011/136;20/12/2011;736 m;Arrêté n° 2012/498
+988498,64;6244941,12;Pasquiers;DPC;Chemin des Pasquiers;Chemin de la Mort du Luc;Parcelle AZ 97;2011/136;20/12/2011;296 m;Arrêté n° 2012/498
+986374,73;6244272,23;Salles;Rurale;Chemin des Salles;Chemin du Canadel;Chemin du Carry;97/140;27/11/1997;582 m;
+986521,47;6244356,53;Bas des Vignes;Rurale;Chemin du Bas des Vignes;Chemin de Trémouriès;Chemin du Canadel;2011/047;10/05/2011;146 m;Arrêté n° 2013/135
+987436,2;6244665,13;Bord de la Rivière;Rurale;Chemin du Bord de la Rivière;Chemin de Giégi;Chemin de la mort du Luc;;24/02/1943;937 m;
+984999,42;6243396,44;Bourru;Privée;Chemin du Bourru;Route de la Mole;Chemin du Canadel;2012/007;23/02/2012;877 m;Arrêté n° 2012/500
+985290,45;6243503,04;Canadel;Privée;Chemin du Canadel;Chemin du Canadel (rural);Chemin du Bourru;;;340 m;
+986660,64;6244444,16;Canadel;Rurale;Chemin du Canadel;Chemin de Trémouriès;Chemin du Canadel (Privé);;24/02/1943;1689 m;Arrêté n° 2012/501
+986784,11;6244975,94;Carry;Rurale;Chemin du Carry;Chemin de Trémouriès;Impasse;;24/02/1943;1094 m;Arrêté n° 2012/502
+987125,6;6244887,43;Colombier;Rurale;Chemin du Colombier ;Route de La Mole;Chemin de Giégi;2011/131;20/12/2011;390 m;Arrêté n° 2014/994
+984795,47;6245784,2;Hameau de l'Hermitan;Privée;Chemin du Hameau de l'Hermitan;Chemin de l'Hermitan;Impasse;2011/085;13/09/2011;542 m;Arrêté n° 2012/504
+986281,57;6244674,5;Mistral;Publique;Chemin du Mistral;Chemin du Carry;Impasse;2012/049;15/05/2012;293 m;Arrêté n° 2012/505
+985581,46;6243072,54;Val d'Astier;Privée;Chemin du Val d'Astier;Route de La Mole;Impasse;;;330 m;Arrêté n° 2012/506
+985787,99;6245824,37;Notre Dame des Anges;Publique;Chemin Notre Dame des Anges;Chemin de l'Argentière;Chemin de Radasse;;;231 m;Arrêté n° 2014/1003
+991539,51;6247226,69;Capitainerie;Publique;Esplanade de la Capitainerie;Quai de la Galiote;Impasse;;;149m;
+986137,54;6245662,84;Camoin;DPC;Impasse  Charles Camoin;Rue Maurin des Maures;Impasse;2006/56;23/05/2006;54 m;
+987211,5;6245537,82;Aubert;Privée;Impasse Aubert;Avenue Georges Clémenceau;Impasse;;;113 m;
+986173,42;6245231,05;Cigale;Privée;Impasse de La Cigale;Chemin des Coustellines;Impasse;2012/004;23/02/2012;109 m;Arrêté n° 2014/991
+986231,49;6245542,96;Petite Bruyère;Communale;Impasse de la Petite Bruyère;Avenue Paul Cézanne;Impasse;2011/085;13/09/2011;54 m;Arrêté n° 2012/510
+986042,5;6245213,48;Source;Privée;Impasse de la source;Chemin de Vaubelette;Impasse;96/90;30/05/1996;137 m;
+986811,15;6245623,98;Audiguier;DPC;Impasse de l'Audiguier;Rue de l'Audiguier;Impasse;;25/09/1989;107 m;
+990298,4;6247400,21;Tous les Vents;Communale;Impasse de tous les Vents;RN98;Impasse;2012/005;23/02/2012;564 m;Arrêté n° 2013/136
+986221,21;6244362,41;Agapanthes;Privée;Impasse des Agapanthes;Chemin des Salles;Impasse;2012/008;23/02/2012;93 m;Arrêté n° 2012/511
+986331,76;6245847,05;Anges;Communale;Impasse des Anges;Chemin de Radasse;Impasse;;24/11/2016;28 m;Délib 2016/203
+990468,79;6247402,96;Artisans;Privée;Impasse des Artisans;Allée du Grand Port;Impasse (Parcelle BH 12);;;;
+986796,33;6245787,91;Impasse;Publique;Impasse des Moulins;Rue des Moulins;Impasse;;05/09/1989;57 m;
+986079,98;6246018,55;Oliviers;Privée;Impasse des Oliviers;Rue Blaise Pascal;Impasse (AL269);2013/013;15/03/2013;207 m;
+987299,47;6245544,68;Pignes;Communale;Impasse des Pignes;Avenue des Mûriers;impasse;2015/003;23/02/2015;44m;
+987359,95;6245255,54;Pitchouns;DPC;Impasse des Pitchouns;Ront-Point Peirin;Impasse;2007/104;23/10/2007;103 m;
+986291,83;6245260,08;Rouves;DPC;Impasse des Rouves;Rue des Rouves;Impasse;2001/092;14/07/2001;42 m;
+986279,91;6244258,35;Salles;Privée;Impasse des Salles;Chemin des Salles;Impasse;;;60 m;
+986979,66;6245545,75;11-nov;Publique;Impasse du 11 Novembre;Rue du 11 Novembre;Impasse;;;30 m;
+986582,42;6244471,72;Bon Temps;Privée;Impasse du Bon Temps;Impasse du chêne;Impasse;2012/048;15/05/2012;113 m;Arrêté n° 2012/514
+986659,87;6244442,59;Chêne;Privée;Impasse du Chêne;Chemin de Trémouriés;Impasse;2011/135;20/12/2011;205 m;Arrêté n° 2012/515
+987058,73;6245192,03;Colombier;Publique;Impasse du Colombier;Rue Marceau;Impasse;;;35 m;
+986664,62;6245691,07;Levant;Privée;Impasse du Levant;Rue du Juge Michel;Impasse;;25/09/1989;89 m;
+987085,48;6245823,17;Petit clos;Publique;Impasse du Petit Clos;Rue Henri Martin;Impasse parcelle AM 252;2013/084;19/09/2013;60 m;
+987172,86;6245680,98;Peyron;Publique;Impasse du Peyron;Rue du Peyron;Impasse;;25/09/1989;67 m;
+989867,46;6246634,07;Plant;Communale;Impasse du Plant;Route de La Foux;Impasse;2011/085;13/09/2011;293 m;Arrêté n° 2013/137
+986253,81;6244293,74;Ruisseau;Privée;Impasse du Ruisseau;Chemin des Salles;Impasse;;;78 m;
+987481,18;6245726,93;Stade;DPC;Impasse du Stade;Avenue des Pétugues;Impasse;2006/039;15/03/2006;98 m;
+986554,93;6245733,13;Zéphir;Privée;Impasse du Zéphir;Avenue Louis Aragon;Impasse;;25/09/1989;117 m;
+986238,97;6246038,7;François Jacob;DPC;Impasse François Jacob;Rue Blaise Pascal;Impasse (AL 300);;25/09/1989;82 m;
+987559,96;6245443,45;Clémenceau;Privée;Impasse Georges Clémenceau;Avenue Georges Clémenceau;Impasse;;;34 m;
+985848,51;6246068,8;Jacques Monod;DPC;Impasse Jacques Monod;Chemin de l'Argentière;Impasse;;25/09/1989;102 m;
+990742,28;6247113,9;Jean Aicard;Privée;Impasse Jean Aicard;Impasse Jean AIcard (privé);Impasse;;25/09/1989;146 m;
+990809,88;6247100,53;Jean Aicard;DPC;Impasse Jean Aicard;Rue Jean Aicard;Impasse Jean AIcard (privé);;25/09/1989;69 m;
+987039,41;6244913,9;Marceau;Publique;Impasse Marceau;Rue Marceau;Impasse / Parcelle AV 134;;;197 m;D.P.Dépt/ Arrêté 2015/819
+987001,38;6245428,56;Parmentier;Publique;Impasse Parmentier;Rue Parmentier;Impasse;;25/09/1989;36 m;
+990904,59;6247161,93;Paul Auguste Arène;Publique;Impasse Paul Auguste Arène;Avenue Jean Aicard;Piste Cyclable;;;90 m;
+986147,7;6245906,89;Piboules;Privée;Impasse Piboules;Impasse des Oliviers;Impasse;2013/014;15/03/2013;102 m;
+986958,95;6245567,17;Saint-Sauveur;DPC;Impasse Saint-Sauveur;Rue du 11 novembre;Impasse;2015/136;17/09/2015;42 m;
+986868,28;6245723,24;Aloes;Publique;Montée des Aloes;Rue des Moulins;Rue de l'horloge;99/076;17/06/1999;83 m;
+986993,56;6245788,58;Saint Roch;Publique;Montée Saint Roch;Rue Carnot;Place Bellevue;;;212 m;
+991510,63;6247083,82;Plage;Publique;Parking de la Plage;Rue de la Plage;Rue de la Plage;;;;
+987408,28;6245506,27;Palmiers;Communale;Parking des Palmiers;Avenue Georges Clémenceau;Avenue du Stade;2012/089;18/09/2012;;
+986868,47;6245234,8;Pisan;Communale;Parking Pisan;Rue Héliodore Pisan;Rue Héliodore Pisan;2016/008;14/01/2016;;
+987145,37;6245626,54;Wildbad;Publique;Passage de Wildbad;Rue Carnot;Parking Mendes France;;;23 m;
+987072,19;6245682,58;Coeur;Publique;Passage du Coeur;Boulevard Michelet;Rue Bianqui;;;172 m;
+988365,03;6243146,8;Jean Morel;DPC;Piste DFCI Jean Morel;Chemin de Giégi;Commune de Gassin;;;1175 m;Arrêté n° 2012/517
+985670,5;6245775,57;Mômes;Privée;Place aux Mômes;Allée de la Musique;Allée de la Musique;99/96;30/05/1996;;
+987008,48;6245789,73;Bellevue ;Publique;Place Bellevue ;Montée Saint-Roch;Rue Blanqui;98/118;27/08/1998;;
+987006,89;6245571,55;République;Publique;Place de la  République;Rue du 8 mai 1945;Avenue du Général de Gaulle;;;;
+986976,4;6245662,29;Liberté;Publique;Place de la Liberté;Rue Edgar Quinet;Rue Blanqui;;;53 m;
+986911,65;6245563,53;Abbé Toti;Publique;Place de l'Abbé Toti;Rue Nationale;Rue de la Placette;;;;
+990999,66;6247096,61;Cigales;Communale;Place des Cigales;Rue Alphonse Daudet;Impasse;;24/11/2016;;
+990858,77;6247076,77;Genêts;Communale;Place des Genêts;Rue Alphonse Daudet;Impasse;;24/11/2016;;
+991393,65;6247062,96;Marché;Publique;Place du Marché;Rue de la Plage;Rue de la Plage;;;242m;
+986948,78;6245560,38;Etienne Dolet;Publique;Place Etienne Dolet;Rue du 11 Novembre;Impasse;98/064;28/05/1998;61 m;
+986884,98;6245454,24;Font-Vieille;Publique;Place Font-Vieille;Rue Font-Vieille;Rue Font-Vieille;;30/05/1983;;
+990870,1;6247199,63;Jules Cortesi ;DPC;Place Jules Cortesi ;Impasse Paul Auguste Arène;Avenue Jean Aicard;;30/05/1983;;
+987209,88;6245668,21;Mendes France;Publique;Place Mendes France;Rue François Pelletier;Avenue des Mûriers;;;;
+987100,43;6245500,2;Victor Hugo;Publique;Place Victor Hugo;Bd du Mal de Lattre de Tassigny;Traverse Victor Hugo;98/118;27/08/1998;;
+991170,82;6247650,5;Brigantine;Privée;Quai de la Brigantine;Boulevard des Marines;Impasse;;;;
+991586,43;6247208,62;Galiote;Publique;Quai de la Galiote;Rue de la Plage;Impasse (Parcelle BE 25);;;466m;
+986906,36;6246101,89; Nº558;Publique;RD Nº558;Rond-Point Saint-Maur;Commune de Grimaud;;;43 m;
+987319,52;6245860,44;André Pousse;Publique;Rond Point André Pousse;Avenue Claude Sautet;Avenue de la Giscle;;;;
+989865,89;6246669,8;Font-Mourier ;Départementale;Rond Point de Font-Mourier;Route de La Foux;Route du Pont de Vinaigre;;25/10/2012;;
+986811,45;6245053,55;1ère D.F.L;Publique;Rd Pt de la 1ère division Française Libre;Rue Héliodore Pisan;Chemin des Fourches;2011/021;29/03/2011;;
+986163,95;6246096,31;Grand-Sud;Départementale;Rond point Grand-Sud;Avenue Saint-Maur;Avenue Blaise Pascal;2010/109;14/12/2010;;
+987187,26;6245280,8;Jean-Pierre de Kock;Publique;Rd Pt Jean-Pierre de Kock;Avenue Sigismond Coulet;Avenue du Subeiran;98/061;28/05/1998;;
+986907,27;6246085,61;Saint-Maur;Publique;Rond Point Saint-Maur;Avenue Claude Sautet;Avenue Saint Maur;2010/109;14/12/2010;;
+987355,57;6245247,94;Rond-Point;Publique;Rond-point;Avenue du Subeiran;Rue du Gaou;;;;Non nommée
+985888,72;6245984,54;Rond-Point;Publique;Rond-Point;Chemin de l'Argentière;Rue Balise Pascal;;;;Non nommée
+987777,09;6245417,59;Armée d'Afrique;Publique;Rond-Point de l'Armée d'Afrique;Route de La Foux;Avenue Georges Clémenceau;;;;
+985876,42;6245577,62;Assomption;Publique;Rond-point de l'Assomption;Chemin des Mines;Chemin de Faucon;2016/029;03/03/2016;;
+990427,37;6247314,11;Port Cogolin;Publique;Rond-Point de Port Cogolin;Rue de la Cité des Marins;Allée du Grand Port;;;;
+989361,55;6246397,13;Narcisses;Départementale;Rond-point des Narcisses;Avneue des Narcisses;Route de La Foux;2016/028;03/03/2016;;
+990354,81;6247266,4;Eole;Publique;Rond-Point Eole;Impase de Tous les Vents;Impasse de Tous les Vents;2012/006;;;
+985860,69;6246141,23;Grenouille;Publique;Rond-Point Grenouille;Avenue Saint-Maur;Chemin de l'Argentière;2010/109;14/12/2010;;
+986235,86;6245374,97;Vaubelette;Publique;Rond-point Vaubelette;Chemin de Vaubelette;Route des Mines;2016/030;03/03/2016;;
+984442,83;6247702,22;Collobrières;Publique;Route de Collobrières RD nº14;RD 48;Commune de Collobrières;;;3610 m;Arrêté n° 2012/518
+989837,23;6246634,11;Foux;Départementale;Route de La Foux;Rond-Point de l'Armée d'Afrique;Commune de Gassin;2012/108;25/10/2012;2503 m;Arrêté n° 2013/139
+987724,62;6245397,5;Mole;Départementale;Route de La Mole;Rond-Point de l'Armée d'Afrique;Commune de La Mole;2012/107;25/10/2012;3470 m;Arrêté n° 2013/138
+985860,21;6246140,3;Rd nº48;Publique;Route Départementale nº48;Rond point Grenouille;Commune de Grimaud;;;2355 m;Arrêté n° 2012/509
+986523,17;6245391,32;Mines;Publique;Route des Mines;Avenue de la Cauquière;Chemin des Mines;;;721 m;Arrêté n° 2012/519
+989841,11;6246671,83;Pont de Vinaigre;Départementale;Route du Pont de Vinaigre;Rond Point de Font-Mourier;Commune de Grimaud;2012/110;25/10/2012;398 m;Arrêté n° 2014/997
+987136,53;6245752,27;Aimé Félix;Publique;Rue Aimé Félix;Rue Carnot;Impasse;;;77 m;
+991057,7;6247020,78;Alphonse Daudet;DPC;Rue Alphonse Daudet;Rue de la Plage (Parcelle BD 102);Parcelle BD 101;;;132 m;
+986292,83;6245428,35;André Campra;DPC;Rue André Campra;Avenue Paul Cezanne;Impasse;;;34 m;
+986688,58;6246081,8;André Marie Ampère;DPC;Rue André Marie Ampère;Avenue Saint-Maur;Rue des Frères Lumière;;25/09/1989;300 m;Arrêté n° 2013/146
+986939,37;6245277,61;Beausoleil;Publique;Rue Beausoleil;Rue Marceau;Boulevard Gérard Philipe;;;251 m;
+985894,65;6245983,64;Blaise Pascal;DPC;Rue Blaise Pascal;Rond-Point Grand-Sud;Rd-Pt de la 1ère armée Rhin et Danube;CM du 25/09/1989;;324 m;Arrêté 2014/939
+987011,29;6245701,53;Blanqui;Publique;Rue Blanqui;Place de la Liberté;Place Bellevue;;;64 m;
+987094,48;6245582,41;Carnot;Publique;Rue Carnot;Rond Point Saint-Maur;Rue Jean Jaurès;;;603 m;
+986905,66;6245655,02;Caroline;Publique;Rue Caroline;Rue du Cadran;Rue de la Résistance;;;16 m;
+985866,14;6246143,59;Condorcet;Publique;Rue Condorcet;Ront-point Grenouille;Rue François Arago;94/104;28/10/1994;429 m;Arrêté n° 2013/147
+990486,8;6247225,08;Cité des Marins;Privée;Rue de la Cité des Marins;Avenue Frédéric Mistral;RN 98;;;;
+986924,16;6245613,65;Placette;Publique;Rue de la Placette;Rue Nationale;Rue de la Résistance;;;41 m;
+991038,27;6247004,09;Plage;Publique;Rue de la Plage;RN 98;Parking;2003/083;18/09/2003;580 m;
+986876,88;6245546,01;Résistance;Publique;Rue de la Résistance;Rue des Mines;Rue des Moulins;;06/07/1945;151 m;
+987638,31;6245777,17;Treille;Privée;Rue de la Treille;Avenue de la Giscle;Impasse;2013/073;20/06/2013;141 m;Arrêté n° 2015/818
+986664,62;6245691,07;Audiguier;DPC;Rue de l'Audiguier;Rue du Juge Michel;Rue du Juge Michel;;25/09/1989;324 m;
+986996,28;6245767,73;Horloge;Publique;Rue de l'Horloge;Rue des Moulins;Place Bellevue;;;130 m;
+987296,76;6245678,52;Caniers;DPC;Rue des Caniers;Avenue des Mûriers;Avenue de La Giscle;94/49;31/05/1994;155 m;
+986628,28;6244983,99;Cistes;Privée;Rue des Cistes;Rue des Genets;Impasse;;25/09/1989;142 m;Arrêté n° 2013/148
+986534,64;6244825,09;Fougères;Privée;Rue des Fougères;Rue des Myrtes;Impasse;;25/09/1989;79 m;Arrêté n° 2013/149
+986170,89;6246191,94;Frères Lumière;DPC;Rue des Frères Lumières;Avenue Saint-Maur;Rue François Arago;;25/09/1989;436 m;Arrêté n° 2013/150
+986723,31;6244930,49;Genets;Privée;Rue des Genets;Chemin du Carry;Rue des Cistes;;25/09/1989;110 m;Arrêté n° 2013/151
+986573,44;6244912,33;Genévriers;Privée;Rue des Genévriers;Rue des Myrtes;Impasse;;25/09/1989;75 m;Arrêté n° 2013/152
+986795,88;6246109,69;Lauriers;Publique;Rue des Lauriers;Avenue de Saint-Maur;Impasse;99/102;29/07/1999;297 m;Arrêté n° 2014/923
+987151,41;6245430,49;Lissiers;Publique;Rue des Lissiers;Boulevard Louis Blanc;Rue Jules Peirin;2007/117;04/12/2007;44 m;
+986906,12;6245546,25;Mines;Publique;Rue des Mines;Rue Diderot;Route des Mines;2007/117;04/12/2007;452 m;
+986531,44;6245843,24;Moulins;Publique;Rue des Moulins;Rue Nationale;Chemin de Radasse;;;488 m;Arrêté n° 2015/719
+986628,28;6244983,99;Myrtes;Privée;Rue des Myrtes;Rue des Genets;Impasse;;25/09/1989;202 m;Arrêté n° 2013/153
+987577,8;6245775,21;Pétugues;DPC;Rue des Pétugues;Avenue du Contant;Avenue de La Giscle;2006/039;14/03/2006;154 m;
+986963,72;6244953,36;Romains;Privée;Rue des Romains;Avenue des Colombiers;Impasse;94/104;24/10/1994;88 m;arrêté n° 2014/926
+986398,56;6246156,22;Roseaux;Publique;Rue des Roseaux;Rue des Frères Lumière;Impasse;99/102;29/07/1999;39 m;
+986226,06;6245341,88;Rouves;Publique;Rue des Rouves;Chemin de Vaubelette;Impasse;96/90;30/05/1996;185 m;Arrêté n° 2012/520
+987240,67;6245043,16;Vignerons;Publique;Rue des Vignerons;Avenue Sisgismond Coulet;Avenue du Subeiran;;11/02/1991;332 m;
+986906,12;6245546,25;Diderot;Publique;Rue Diderot;Rue Gambetta ;Rue des Mines;;;100 m;
+986676,16;6245532,2;Juge Michel;Publique;Rue du  Juge Michel;Rue des Mines;Avenue de l'Audiguier;;30/05/1983;249 m;
+986948,78;6245560,38;11-nov;Publique;Rue du 11 Novembre;Rue Edgar Quinet;Place Etienne Dolet;2007/117;04/12/2007;94 m;
+986993,56;6245788,58;19-mars-62;Publique;Rue du 19 Mars 1962;Montée Saint-Roch;Chemin de Radasse;;;245 m;
+987046,58;6245547,99;08-mai-45;Publique;Rue du 8 mai 1945;Rue du 11 Novembre;Rue Jean Jaurès;;;75 m;
+986896,55;6245624,1;Cadran;Publique;Rue du Cadran;Rue de la Placette;Rue des Moulins;;;61 m;
+987362,46;6245250,17;Gaou;DPC;Rue du Gaou;Rond-Point;Impasse parcelle AT312;2003/145;18/12/2003;80 m;
+987079,78;6245572,7;Général De Gaulle;Publique;Rue du Général De Gaulle;Rue Edgar Quinet;Rue Jean Jaurès;;;93 m;
+987255,71;6245792,45;Peyron;Privée;Rue du Peyron;Rue Carnot;Avenue des Mûriers;;;131 m;
+986968,72;6245744,34;Piquet;Publique;Rue du Piquet;Rue Nationale;Rue de l'Horloge;99/076;17/06/1999;49 m;
+987230,58;6245382,75;Rialet;Publique;Rue du Rialet;Boulevars Louis Blanc;Avenue Sisgismond Coulet;;;92 m;
+987397,65;6245485,71;Stade;Publique;Rue du Stade;Avenue Georges Clémenceau;Impasse;;;136 m;
+986032;6245488,02;Volcan;DPC;Rue du Volcan;Chemin de Faucon;Route des Mines;2000/133;28/11/2000;288 m;
+986976,4;6245662,29;Edgar Quinet;Publique;Rue Edgar Quinet;Avenue du Général de Gaulle;Place de la Liberté;;;51 m;
+986918,75;6245451,6;Fontaine Vieille;Publique;Rue Fontaine Vieille;Rue Marceau;Place Font-Vieille;;;33 m;
+986004,77;6246165,61;François Arago;Privée;Rue François Arago;Rond-Point Grand Sud;Rue Condorcet;;25/09/1989;273 m;Arrêté n° 2014/937
+987240,52;6245530,05;François Pelletier;Publique;Rue François Pelletier;Avenue Georges Clémenceau;Parking Mendès France;;;87 m;
+987046,58;6245547,99;Gambetta;Publique;Rue Gambetta;Rue Jean Jaurès;Rue Marceau;;;162 m;
+986945,31;6245266,17;Héliodore Pisan;Publique;Rue Héliodore Pisan;Rue Marceau;Rond-Point 1ère D.F.L;;;248 m;arrêté n° 2014/996
+987317,03;6245441,35;Barbusse;Publique;Rue Henri Barbusse;Avenue Georges Clémenceau;Impasse;;;64 m;
+987096,32;6245748,02;Henri Martin;Publique;Rue Henri Martin;Rue Carnot;Boulevard Michelet;2013/072;20/06/2013;75 m;arrêté n° 2014/918
+986926,32;6245419,41;Hoche;Publique;Rue Hoche;Rue Gambetta;Rue Marceau;;;123 m;
+986236,31;6245597,41;Jean Giono;DPC;Rue Jean Giono;Avenus Paul Cézanne;Impasse;;;41 m;Arrêté n° 2014/947
+987094,48;6245582,41;Jean Jaurès;Publique;Rue Jean Jaurès;Rue Carnot;Rue Gambetta;;;59 m;
+986986,77;6245499,09;Jean-Jacques Rousseau;Publique;Rue Jean-Jacques Rousseau;Rue Gambetta;Rue Diderot;;;105 m;
+987116,65;6245457,09;Jules Peirin;Publique;Rue Jules Peirin;Avenue Georges Clémenceau;Traverse Victor Hugo;;;72 m;
+986723,31;6244930,49;Lou Lavandies;Publique;Rue Lou Lavandies;Chemin du Carry;Chemin de Trémouriés;;21/05/1990;49 m;Arrêté n° 2013//154
+987100,18;6244864,67;Marceau;Publique;Rue Marceau;Rue Gambetta;Route de La Mole;;;701 m;
+986265,34;6245438,39;Marcel Pagnol;DPC;Rue Marcel Pagnol;Avenue Paul Cézanne;Impasse;;;32 m;arrêté n° 2013/155
+986236,31;6245597,41;Maurin des Maures;DPC;Rue Maurin des Maures;Avenue Paul Cézanne;Impasse Charles Camoin;;;86 m;arrêté n° 2013/156
+986170,86;6245766,16;Mireille;DPC;Rue Mireille;Chemin de Radasse;Impasse;99/076;17/06/1999;99 m;Arrêté n° 2012/522
+986998,32;6245761,19;Nationale;Publique;Rue Nationale;Rue Diderot;Place Bellevue;;;251 m;
+986971,75;6245440,34;Parmentier;Publique;Rue Parmentier;Rue Hoche;Boulevard de Lattre de Tassigny;;;188 m;
+987047,23;6245462,77;Pasteur;Publique;Rue Pasteur;Avenue Georges Clémenceau;Boulevard de Lattre de Tassigny;;;133 m;Arrêté n° 2016/209
+986945,62;6245700,91;Rompecul;Publique;Rue Rompecul;Rue Nationale;Rue du Piquet;99/076;17/06/1999;33 m;
+986936,94;6245648,84;Saint Exupéry;Publique;Rue Saint Exupéry;Rue Nationale;Place de La Liberté;99/102;29/07/1999;37 m;
+986843,83;6245102;Saint Jacques;Privée;Rue Saint Jacques;Rue Pisan;Avenue du Colombier;;;228 m;Arrêté n° 2014/995
+986719,19;6245859,14;Marcel Mansui;DPC;Square Marcel Mansui;Chemin de Radasse;Parcelle AN 197;;;;
+986594,27;6245552,4;Buissonière;Publique;Traverse Buissonière;Rue du Juge Michel;Avenue Louis Aragon;2010/109;14/12/2010;66 m;Arrêté n° 2014/920
+987357,96;6245496,83;Gare;Communale;Traverse de la Gare;Avenue Georges Clémenceau;Rue du Stade;2015/003;23/02/2015;78m;
+987240,28;6245412,68;Ecoliers;DPC;Traverse des Ecoliers;Avenue Sigismond Coulet;Impasse;2007/104;23/10/2007;53 m;
+986985,6;6245715,92;Château;Publique;Traverse du Château;Rue Nationale;Rue du Piquet;2007/117;04/12/2007;39 m;
+987098,06;6245508,23;Victor Hugo;Publique;Traverse Victor Hugo;Rue Pasteur;Rue Peirin;2010/109;14/12/2010;47 m;
+985535,01;6244827,47;Vieux Magnan;Rurale;Vieux Chemin de Magnan;Chemin de Faucon;Chemin de Magnan;;;864 m;Arrêté n° 2012/507
+990427,89;6247313,41;Port Cogolin;Privée;Voie privée;Rd Pt Eole;Rd Pt de Port Cogolin;;;;Non nommée
+990888,97;6247671,03;Voie privée;Privée;Voie privée;Bouvevard des Marines;Impasse / Parcelle BE 25;;;;Non nommée

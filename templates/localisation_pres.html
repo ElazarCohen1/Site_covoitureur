@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{%block menu%}
+<li><a href="/profil">Profil</a></li>
+<li> <a href="/trajet">trajet</a></li>
+<li> <a href="/trajet_en_cours/post">Trajet en cours</a></li>
+<li> <a href="/deconnexion">deconnexion</a></li>
+{%endblock%}
+
+{%block content%}
+    <h2>{{name}}</h2>
+    <p>{{addresse}}</p>
+    <p>{{description}}</p>
+    <ul>
+        {% for c in comments %}
+        <li> <b>{{c[0]}}</b> : {{c[1]}}</li>
+        {%endfor%}
+    </ul>
+    <form action="/loc/{{id_loc}}/post_comment" method="post">
+        <textarea name="com" cols="40" rows="4"></textarea>
+        <input name="submit" type="submit" value="Poster">
+    </form>
+{%endblock%}

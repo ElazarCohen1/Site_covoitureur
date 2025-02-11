@@ -1,0 +1,199 @@
+\section{Ajout par rapport au deuxième rapport}
+	\subsection{Dans le dump}
+		\begin{enumerate}
+			\item 
+				dans la table covoitureur nous avions mis la taille des mot de passe a 64 or pour hacher le mot de passe la taille du mot de passe est de 60. 
+			\item 
+				Dans la table trajet nous avons rajouter un durée trajet de type interval et nb\_km de type numeric(6,3) car en avons beosin pour les VIEW demander 
+			\item 	
+				dans la table trajet, nous avons enlevé une relation redondante qui étais l'association conduit car nous pouvons y accéder avec un \textit{JOIN} entre le trajet et les véhicules dans le shema entité association.
+			\item 
+				nous avons enlever la date dans étape, en effet c'est la même information que la date dans trajet, elle est donc inutile.
+		\end{enumerate}
+	\subsection{Génération du dump}
+		Dans le rapport 2 nous avions générer quelque données avec une IA. Mais cette fois nous avons créer un fichier python qui permet de générer un dump aléatoire avec autant de données que souhaité. vous pourrez trouver le fichier pour générer ce dump dans un dossier Dumpmaker et il faut lancer le fichier dumpmaker.py. (la génération des covoitureurs avec le hashage des mot de passe est un peu long)
+		
+
+\section{Explication du site}
+	\subsection{Menu}
+		\begin{itemize}
+			\item 
+				Si vous n'êtes pas connecte vous avez accès que a l'accueil, a connexion et les statistiques. 
+			\item 
+				Si vous êtes connecte en revanche vous pourrez apercevoir l'accueil, votre profil, les trajets, les trajets en cours, se déconnecter et les statistiques . 
+		\end{itemize}
+		
+	\subsection{Accueil}
+		en arrivant sur le site vous pourrez trouver une belle page d'accueil ou vous pourrez a votre guise regarder les trajets existants. 
+		vous trouverez aussi un menu avec une page de connexion et les statistiques du site. 
+	\subsection{Connexion}
+		vous pouvez maintenant vous connecter avec votre compte si vous en avez un, ou dans le cas contraire vous inscrire en rentrant votre email, nom,prénom,etc. 
+		une fois inscris vous pouvez vous connecter a votre compte qui vous dirige vers l'accueil. Vous avez maintenant accès a l'ensemble du menu pour naviguer dans le site.
+	
+	\subsection{Profil} 
+		Comme dit plus haut si vous êtes connecte vous pouvez allez sur votre profil. 
+		Le profil est divisé en 4 parties:
+		\begin{enumerate}
+			\item
+				Les données de l'utilisateur: elles permettent de voir les données comme le nom, le prénom,l'argent,si on a le permis pouvoir l'enlever ou le rajouter si il nous a été retirer par les policiers ou le FBI. On peut aussi voir son parrain si on en a un et les filleuls.
+			\item 
+				La deuxième parti est pour voir les véhicules en sélectionnant la plaque d'immatriculation et on peut aussi ajouter un véhicule.  
+				Des qu'on voit un véhicule :
+				\begin{itemize}
+					 \item 
+					 	on peut voir les données de son véhicule avec le nombre de place ou encore la couleur 
+					 \item 
+					 	on peut aussi modifier son véhicule en modifiant la plaque ou la couleur, etc .
+					 \item  
+					 	la troisième parti du véhicules est pour sponsoriser son véhicule en choisissant le sponsor parmi les différents sponsor 
+				\end{itemize}
+			\item 
+				la troisième parti parti du profil est la liste des différents trajet déjà effectué.
+
+				\begin{table}[h!]
+					\centering
+					\begin{tabular}{cc}
+						\includegraphics[width=0.4\textwidth]{trajet.png} & 
+						\begin{minipage}[c]{0.5\textwidth}
+							Comme vous pouvez le voir sur l'image, j'ai utilisé un peu de JavaScript pour pouvoir naviguer parmi les trajets passés.
+						\end{minipage}
+					\end{tabular}
+					\caption{Navigation avec JavaScript}
+					\label{fig:exemple}
+				\end{table}
+			\item 
+				la dernière parti c'est les opérations sur votre compte en raison des couts des trajets ou si vous avez conduit certains trajets vous recevez de l'argent. 	
+		\end{enumerate}
+	\subsection{Trajet}		
+		Sur le menu il y'a une page de trajet, elle permet de proposer un nouveau trajet avec une étape et d'arrivée.
+		on peut aussi tout les trajets avec les information nécessaire ou si on veut en savoir plus on peux cliquer sur plus d'information pour voir précisément le trajet et pouvoir rajouter une étape au trajet.On peut aussi noter le conducteur ou encore allez dans plus d'info sur l'étape et écrire un commentaire de la localisation. \\
+		Si un utilisateur propose une nouvelle étape le covoitureur depuis son compte peut voir l'étape qui a été proposé, l'accepter a sa guise et finalisée le trajet. Il peut aussi le réouvrir pour permettre a un utilisateur de proposer une nouvelle étape.\\
+		un covoitureur (caractérisé par son permis de conduire) peut créer un nouveau trajet en renseignant une etape de départ et d'arriver avec le cout du trajet, le nombre de kilomètre que fais le trajet le temps espéré etc.
+		
+		 
+	
+	\subsection{Trajet en cours}
+		La page trajet en cours permet a l'utilisateur de voir ses trajets et de pouvoir trier pour voir seulement les trajets en cours ou les trajets passées, etc.
+	
+	\subsection{Déconnexion}
+		ce n'est pas une page mais on peut se déconnecter ce qui permet de supprimer de la session l'utilisateur et le redirige vers l'accueil sans toutes les options.
+	
+	\subsection{Statistiques}
+		les statistiques permettent de voir les lieux les 10 lieux les plus visités du site et le nombre de km parcourus au total et avec des voitures sponsorisés 
+		
+\section{Explication du code}
+nous allons expliquer quelques bout de code important 
+	\subsection{La clé secrète}
+		Pour générer la clé sécrète nous avons utilisé le module secrets de python.
+		\begin{lstlisting}[language=python]
+			secrets.token_urlsafe(100)
+		\end{lstlisting}
+		Ce qui nous a permis de générer une clé secrète de 100 caractères. 
+	\subsection{L'accueil}	
+		nous avons écris une route supplémentaire pour arriver directement sur l'accueil au lancement du site
+		\begin{lstlisting}[language=python]
+			@app.route("/")
+			def main()->None:
+			return redirect(url_for("accueil"))
+		\end{lstlisting}
+	
+	\subsection{Éviter de réécrire la base de la template}
+		pour éviter de réécrire dans chaque template la base du html nous avons créer une page $base.html$ qui nous sert de base a toute les templates. 
+		\begin{lstlisting}[language=html]
+			<!DOCTYPE html>
+			<html lang="en">
+			<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<link rel="stylesheet" type="text/css" href="../static/base.css">
+			{%block css%}  {%endblock%}
+			<title>{%block title%} {%endblock%} </title>
+			</head>
+			<header>
+			<nav>
+			<ul>
+			<li><a href="/accueil">Accueil</a></li>
+			{%block menu%}
+			<li><a href="/connexion">Connexion</a></li>
+			{%endblock%}
+			<li><a href="/statistiques">Statistique</a></li>
+			
+			
+			</ul>  
+			</nav>
+			</header>
+			<body>
+			<div id = "content">
+			{%block content%} {%endblock%}
+			
+			</div>
+			</body>
+			</html>
+		\end{lstlisting}
+		
+		En faisant ca cela nous permet d'avoir une template sans avoir a réécrire toute la base html et surtout si nous voulons modifier le menu ou le css du menu nous avons pas besoin de le modifier dans toute les pages. Nous avons juste a écrire comme ci dessous. 
+		\pagebreak
+		\begin{lstlisting}[language=html]
+			{% extends "base.html" %}
+			{%block css%} <link rel="stylesheet" type="text/css" href="../static/connexion.css"> {%endblock%}
+			{%block menu%}            
+			<li><a href="/connexion">Connexion</a></li>
+			{%endblock%}
+			
+			{%block content%}
+			{%endblock%}
+		\end{lstlisting} 
+		
+	\subsection{Petits icons}
+		Dans le profil nous avons ajouté des petits icons pour rendre le visuel plus sympathique. 
+	
+	\section{Quelques requêtes SQL intéressante}
+		Nous avons fait pas mal de requêtes SQL dans ce projet notamment pour afficher des données ou des trajets et/ou faire des update de la base de donnée pour ajouter un véhicule ou le modifier ou encore proposer une étape et créer un trajet. Voici quelques requêtes SQL.
+		\begin{lstlisting}[language=SQL]
+SELECT id_trajet, date, cout_trajet, nom, prenom, nombre_places 
+FROM trajet AS t 
+JOIN vehicules AS v ON t.vehicule = v.immatriculation 
+JOIN covoitureur AS c ON c.email = v.proprietaire
+WHERE date >= '%s-%s-%s'
+ORDER BY date LIMIT 20 OFFSET %s;
+		\end{lstlisting}
+		
+		\begin{lstlisting}[language=SQL]
+SELECT trajet.id_trajet,trajet.date,cout_trajet FROM etape
+JOIN trajet ON etape.id_trajet = trajet.id_trajet 
+JOIN vehicules ON trajet.vehicule = vehicules.immatriculation 
+	JOIN covoitureur ON covoitureur.email = vehicules.proprietaire
+WHERE est_depart_de = %s AND est_depart_de <> email  AND trajet.date <= %s  AND trajet.status = True ORDER BY trajet.date;
+
+		\end{lstlisting}
+		passager avec covoitureur la personne connecté
+	
+\section{Organisation du travail}
+	Nous nous sommes repartis les taches équitablement.En effet Elazar s'est occupé de la connexion l'inscription et le profil et Augustin s'est occupé des trajets , trajets en cours et les statistiques.
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

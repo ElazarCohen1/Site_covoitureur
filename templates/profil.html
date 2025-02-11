@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+
+{%block css%}<link rel="stylesheet" type="text/css" href="../static/profil.css">{%endblock%}
+
+{%block menu%}
+<li><a href="profil">Profil</a></li>
+<li> <a href="trajet">trajet</a></li>
+<li> <a href="trajet_en_cours/post">Trajet en cours</a></li>
+<li> <a href="deconnexion">deconnexion</a></li>
+{%endblock%}
+
+
+
+{%block content%}
+
+<div id="content">
+    <div id="donnee_utilisateur">
+        <img src="../static/user.png" alt="user" id="user">
+        <p>nom: {{dico_donnee["nom"]}}</p>
+        <p>prenom :{{dico_donnee["prenom"]}}</p>
+        <p>mail : {{dico_donnee["email"]}}</p>
+        <p>addresse :{{dico_donnee["addresse"]}}</p>
+        <p>date de naissance :{{dico_donnee["date_naissance"]}}</p>
+        <p>argent :{{dico_donnee["argent"]}}</p>
+        <p>permis : {{dico_donnee["numero_permis"]}}</p>
+        {%if not dico_donnee["numero_permis"]%}
+            <p>status : passager</p>
+            <div id="ajouter_permis">
+                <p>permis : non </p>
+                <form method="post" action="ajout_permis">
+                    <input type="text" id="ajout_permis" name="permis"  placeholder="ajouter un permis"  maxlength="12">
+                    <input type="submit" id="submit">
+                </form>
+            </div>
+
+        {%else%}
+            <p>status: covoitureur</p>
+            <p>permis : {{dico_donnee["numero_permis"]}}</p>
+            <form action="/supprimer_permis/{{dico_donnee['numero_permis']}}" method="post">
+                <input type="submit" value="supprimer permis">
+            </form>
+
+        {%endif%}
+
+        {%if dico_donnee["parrain"]%}
+            <p>parrain :{{dico_donnee["parrain"]}} </p>
+        {%endif%}
+
+        {%if dico_donnee["filleul"]%}
+            <form>
+                <label for="filleul">filleul</label>
+                <select>
+                    {%for val in dico_donnee["filleul"]%}
+                    <option value="{{val}}">{{val}}</option>
+                    {%endfor%}
+                </select>
+
+            </form>
+        {%endif%}
+
+    </div>
+    
+    <div id="gerer_voiture">
+        <img src="../static/car.png" alt="icon voiture">
+        {%if lst_vehicules%}
+            <form method="post" action="res_voiture">
+                <label for="voiture">voir vos voitures :</label>
+                <select id="voiture" name="vehicule">
+                    {% for val in lst_vehicules%}
+                        <option value={{val}}> {{val}}</option>
+                    {%endfor%}
+                </select>
+                <input type="submit" value="vehicule"  id="vehicule">
+            </form> 
+        {%else%}
+        <p>tu n'as aucun vehicules</p>
+        {%endif%} 
+        {%if dico_donnee["numero_permis"]%}
+        <div id="gerer_vehicule">
+            <p>ajouter un vehicule: </p>
+            <form action="gerer_vehicule" , method="post">
+                <input name="immatriculation" type="text" id="immatriculation" placeholder="rentrez votre immatriculation" maxlength="7" minlength="7">
+                <input name="modele" type ="text" id="modele" placeholder="modele du vehicule">
+                <input name="nombre_place" type ="number" id="nombre_place" placeholder="nombre de place" min="0" max="10">
+                <div id="color ">
+                    <label for="couleur">couleur : </label>
+                    <input name="couleur" type ="color"  id="couleur">
+                </div>
+                
+                <input name="type_carburant" type ="text" id="type_carburant" placeholder=" type du carburant ">
+                <input name="crit_Air" type ="text" id="crit_Air" placeholder="crit_Air" minlength="1" maxlength="1">
+                <input type="submit" name="submit_vehicule" id="submit_vehicule" value="ajouter">
+            </form>
+           
+        </div>
+        {%endif%}       
+    </div>
+    
+    <div id="historique_deplacement">
+        <img src="../static/trip.png" alt="icon trip">
+        {%if lst_trajet%}
+            {%for val in lst_trajet%}
+                <div id="texte_deplacement" class="trajet">
+                    <p>id_trajet :{{val["id_trajet"]}} </p>
+                    <p>date : {{val["date"]}}</p>
+                    <p>cout du trajet : {{val["cout_trajet"]}} €</p>
+                    <p>duree du trajet: {{val["duree_trajet"]}} </p>
+                    <p>nb de kilomètre: {{val["nb_km"]}} km</p>
+                    <p>vehicule : {{val["vehicule"]}} </p>
+                </div>
+            {%endfor%}
+            <div class="navigation">
+                <button id="btn_prev">⬅️ Précédent</button>
+                <button id="btn_suiv">➡️ Suivant</button>
+            </div>
+
+
+        {%else%} 
+            <p>tu n'a pas encore de trajet</p>
+      {%endif%}
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let trajets = document.querySelectorAll(".trajet");
+            let currentIndex = 0;
+
+            // Fonction pour mettre à jour l'affichage
+            function updateDisplay() {
+                trajets.forEach((trajet, index) => {
+                    trajet.classList.toggle("active", index == currentIndex);
+                });
+            }
+            document.getElementById("btn_prev").addEventListener("click", function() {
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : trajets.length - 1;
+                updateDisplay();
+            });
+
+            document.getElementById("btn_suiv").addEventListener("click", function() {
+                currentIndex = (currentIndex < trajets.length - 1) ? currentIndex + 1 : 0;
+                updateDisplay();
+            });
+
+            // Initialisation
+            updateDisplay();
+        });
+
+    </script>
+    
+    <div id="operation_compte">
+        <img src="../static/bank.png" alt="icon bank">
+        {%if lst_operation%}
+            {%for operation in lst_operation%}
+            <p> + {{operation[1]}}€ le {{operation[0]}}, trajet : {{operation[2]}}   </p>
+            {%endfor%}
+            {%for o in lst_operation_passager%}
+                <p> - {{o[1]}} € le {{o[0]}}, trajet : {{o[2]}} </p>
+                <p>{{operation}}</p>
+            {%endfor%}
+        {%else%}   
+            <p>tu n'a aucune operation sur ton compte</p> 
+        {%endif%}
+    </div>
+</div>
+
+{%endblock%}

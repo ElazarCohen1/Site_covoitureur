@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/base.css">
+    {%block css%}  {%endblock%}
+    <title>{%block title%} {%endblock%} </title>
+</head>
+<header>
+    <nav>
+        <ul>
+            <li><a href="/accueil">Accueil</a></li>
+            {%block menu%}
+            <li><a href="/connexion">Connexion</a></li>
+            {%endblock%}
+            <li><a href="/statistiques">Statistique</a></li>
+
+            
+        </ul>  
+    </nav>
+</header>
+<body>
+    <div id = "content">
+        {%block content%} {%endblock%}
+
+    </div>
+</body>
+</html>

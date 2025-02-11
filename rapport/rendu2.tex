@@ -1,0 +1,217 @@
+
+
+
+
+
+\section{Traduction du Schéma Entité-Association}
+	En traduisant le schéma entité-association on obtient les tables suivantes:
+	\begin{itemize}
+		\item Covoitureur(\underline{email}, nom, prenom, addresse, date\_de\_naissance, mdp, num\_permis, argent, parrain)
+		\item Localisation(\underline{id\_localisation}, nom, adresse, description, ville)
+		\item Etape(\underline{id\_etape}, heure\_prevue, heure\_reel, statut, date, trajet, est\_depart\_de, est\_arriver\_de, localisation)
+		\item Trajet(\underline{id\_trajet}, date, cout, statut, vehicule, conducteur, nb\_km, duree)
+		\item Vehicules(\underline{immatriculation}, modele, nb\_place, couleur, carburant, crit\_air, proprietaire)
+		\item Sponsor(\underline{id\_sponsor}, nom, nature, duree\_requise, remmuneration)
+		
+		
+		\item Sponsorise(\underline{id\_sponsor, immatriculation})
+		\item Commente(\underline{email, id\_localisation}, commentaire)
+		\item Evalue(\underline{source, cible}, note)
+	\end{itemize}
+	On a les clefs étrangères:
+	\begin{itemize}
+		\item Sponsorise(id\_sponsor) fais reférence à Sponsor(id\_sponsor)
+		\item Sponsorise(immatriculation) fais reférence à Vehicules(immatriculation)
+		\item Commente(email) fais reférence à Covoitureur(email)
+		\item Commente(id\_localisation) fais reférence à Localisation(id\_localisation)
+		\item Evalue(source) fais reférence à Covoitureur(email)
+		\item Evalue(cible) fais reférence à Covoitureur(email)
+		\item Covoitureur(parrain) fais reférence à Covoitureur(email)
+		\item Vehicule(proprietaire) fais référence à Covoitureur(email)
+		\item Trajet(vehicule) fais référence à Vehicules(immatriculation)
+		\item Trajet(conducteur) fais référence à Covoitureur(email)
+		\item Etape(trajet) fais référence  à Trajet(id\_trajet)
+		\item Etape(est\_depart\_de) fais référence à Covoitureur(email)
+		\item Etape(est\_arriver\_de) fais référence à Covoitureur(email)
+		\item Etape(localisation) fais référence à Localisation(id\_localisation)
+	\end{itemize}
+	
+	\section{Implémentation}	
+	\subsection{Schéma de la base et Justification des choix}
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\multicolumn{3}{|c|}{Covoitureur}\\
+			\hline
+			Nom & Type & Contrainte \\
+			\hline
+			email & varchar(100) & PRIMARY KEY \\\hline
+			nom & varchar(50) & NOT NULL \\\hline
+			prenom & varchar(50) & NOT NULL \\\hline
+			addresse & varchar(100) & NOT NULL \\\hline
+			date\_de\_naissance & date & NOT NULL \\\hline
+			mdp & char(64) & NOT NULL \\\hline
+			num\_permis & char(12) & \\\hline
+			argent & numeric(11, 2) & default 0 \\\hline
+			parrain & varchar(100)	& REFERENCES Covoitureur(email) ON DELETE SET NULL \\\hline
+			\multicolumn{3}{|c|}{CHECK (email  $< >$ parrain)}\\\hline
+		\end{tabular}
+		
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\multicolumn{3}{|c|}{Localisation}\\
+			\hline
+			Nom & Type & Contrainte \\
+			\hline
+			id\_localisation & serial & PRIMARY KEY \\\hline
+			nom & varchar(50) & NOT NULL \\\hline
+			addresse & varchar(100) & NOT NULL \\\hline
+			description & varchar(500) & \\\hline
+			ville & varchar(64) & NOT NULL \\\hline
+		\end{tabular}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\multicolumn{3}{|c|}{Etape}\\
+			\hline
+			Nom & Type & Contrainte \\
+			\hline
+			id\_etape & serial & PRIMARY KEY \\\hline
+			heure\_prevue & time & NOT NULL \\\hline
+			heure\_reel & time &  \\\hline
+			status & bool & default false \\\hline
+			date & date & NOT NULL \\\hline
+			trajet & int & NOT NULL REFERENCES trajet(id\_trajet) ON DELETE CASCADE \\\hline
+			est\_depart\_de & varchar(100) & REFERENCES Covoitureur(email) ON DELETE CASCADE \\\hline
+			est\_arriver\_de & varchar(100) & REFERENCES Covoitureur(email) ON DELETE CASCADE \\\hline
+			localisation & int & NOT NULL REFERENCES Localisation(id\_localisation) ON DELETE CASCADE\\\hline
+			\multicolumn{3}{|c|}{CHECK((est\_depart\_de IS NULL AND est\_arriver\_de IS NOT NULL)} \\
+			\multicolumn{3}{|c|}{OR (est\_depart\_de IS NOT NULL AND est\_arriver\_de IS NULL))}\\\hline
+		\end{tabular}
+		
+		
+		
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\multicolumn{3}{|c|}{Vehicules}\\
+			\hline
+			Nom & Type & Contrainte \\
+			\hline
+			immatriculation & char(7) & PRIMARY KEY \\\hline
+			modele & varchar(55) & NOT NULL \\\hline
+			nb\_places & int & NOT NULL \\\hline
+			couleur & varchar(60) & NOT NULL \\\hline
+			carburant & varchar(50) & NOT NULL \\\hline
+			crit\_air & char(1) & NOT NULL CHECK(crit\_air IN ('E', '1', '2', '3', '4', '5')) \\\hline
+			proprietaire & varchar(100) & NOT NULL REFERENCES Covoirureur(email) \\
+			&&  ON DELETE CASCADE ON UPDATE CASCADE \\\hline
+		\end{tabular}
+		
+		\begin{tabular}{|c|c|c|}
+				\hline
+			\multicolumn{3}{|c|}{Trajet}\\
+			\hline
+			Nom & Type & Contrainte \\
+			\hline
+			id\_trajet & serial & PRIMARY KEY \\\hline
+			date & date & NOT NULL \\\hline
+			cout & numeric(9, 2) & NOT NULL \\\hline
+			statut & bool & default false \\\hline
+			vehicule & char(7) & NOT NULL REFERENCES Vehicules(immatriculation) ON DELETE CASCADE \\\hline
+			localisation & int & NOT NULL REFERENCES Localisation(id\_localisation) ON DELETE CASCADE \\\hline
+			nb\_km & int & CHECK(nb\_km $>$= 0)  \\\hline
+			duree & interval &\\\hline
+		\end{tabular}
+		
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\multicolumn{3}{|c|}{Sponsor}\\
+			\hline
+			Nom & Type & Contrainte \\
+			\hline
+			id\_sponsor & serial & PRIMARY KEY \\\hline
+			nom & varchar(75) & NOT NULL \\\hline
+			nature & varchar(500) & NOT NULL \\\hline
+			duree\_requise & interval & NOT NULL \\\hline
+			remuneration & numeric(11, 2) & NOT NULL\\\hline
+		\end{tabular}
+		
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\multicolumn{3}{|c|}{Sponsorise}\\
+			\hline
+			Nom & Type & Contrainte \\
+			\hline
+			id\_sponsor & int & REFERENCES Sponsor(id\_sponsor)\\\hline
+			immatriculation & char(7) & REFERENCES Vehicules(immatriculation) \\\hline
+			\multicolumn{3}{|c|}{PRIMARY KEY (id\_sponsor, immatriculation)}\\\hline
+		\end{tabular}
+		
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\multicolumn{3}{|c|}{Commente}\\
+			\hline
+			Nom & Type & Contrainte \\
+			\hline
+			email & varchar(100) & REFERENCES Covoitureur(email) \\
+			& & ON DELETE CASCADE ON UPDATE CASCADE \\\hline
+			id\_localisation & int & REFERENCES Localisation(id\_localisation) \\\hline
+			commentaire & varchar(500) & NOT NULL \\\hline
+			\multicolumn{3}{|c|}{PRIMARY KEY (email, id\_localisation)}\\\hline
+		\end{tabular}
+		
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\multicolumn{3}{|c|}{Evalue}\\
+			\hline
+			Nom & Type & Contrainte \\
+			\hline
+			source & varchar(100) & REFERENCES Covoitureur(email)  \\
+			& & ON DELETE CASCADE ON UPDATE CASCADE\\\hline
+			cible & varchar(100) & REFERENCES Covoitureur(email)  \\
+			& & ON DELETE CASCADE ON UPDATE CASCADE\\\hline
+			note & int & NOT NULL \\\hline
+			\multicolumn{3}{|c|}{PRIMARY KEY (source, cible)}\\\hline
+			\multicolumn{3}{|c|}{CHECK (source  $< >$ cible)}\\\hline
+		\end{tabular}
+	\end{center}
+	Nous avons fais certain choix sur les types:
+	\begin{itemize}
+		\item Les mot de passent sont stocker comme des chaines de caractères d'exactement 64 caractères car ils seront hacher avant que leur forme hexadécimal soit stocker.
+		\item  Nous séparons la date et les heures pour ne pas permettre de renseigné le décalage de deux jours
+		\item Nous avons rajouter un attribut longueur pour pouvoir réaliser les demandes supplémentaires
+	\end{itemize}
+
+	\subsection{Contraintes non Garantie}
+	Il y a des contraintes que nous n'avons pas pus implémentés dans le schéma:
+	\begin{itemize}
+		\item Il nous est impossible de vérifier que l'e-mail de l'utilisateur est valide
+		\item Il en est de même pour les plaques d'immatriculations 
+		\item  Nous ne pouvons pas nous assurer que les covoitureurs  déposent exactement deux étape pour un trajet
+	\end{itemize}
+	\pagebreak
+	\section{Demande supplémentaire}
+	Nous avons créer des vues pour répondre aux contraintes supplémentaire qui nous ont été demander
+	\begin{itemize}
+		\item Obtenir les 10 premiers points de rendez-vous les plus f
+		\begin{lstlisting}[language=SQL]
+CREATE VIEW TopLocation AS (
+	SELECT adresse, ville, COUNT(id_etape) FROM etape
+	NATURAL JOIN Localisation
+	GROUPE BY adresse, ville
+	ORDER BY COUNT(id_etape) DESC
+	LIMIT 10
+);
+		\end{lstlisting}
+		\item Le nombre de kilomètre parcourus pour chaque sponsor
+		\begin{lstlisting}[language=SQL]
+CREATE VIEW SponsorKm AS (
+	SELECT id_sponsor, nom, SUM(nb_km) FROM Sponsor
+	NATURAL JOIN Sponsorise NATURAL JOIN Vehicules
+	JOIN Trajet ON vehicules = immatriculation
+	GROUP BY id_sponsor, nom
+);
+		\end{lstlisting}
+	\end{itemize}
+	
+
+ 
